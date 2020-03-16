@@ -25,4 +25,10 @@ contract("BitWise", () => {
       "result should match"
     );
   });
+
+  it("countBitSetAsm() should pass", async () => {
+    const data = 7;
+    const result = await bitwise.countBitSetAsm(data);
+    assert.equal(result, "3");
+  });
 });
